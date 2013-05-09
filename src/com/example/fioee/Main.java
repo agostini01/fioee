@@ -15,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class Main extends Activity implements OnClickListener {
 
@@ -22,6 +23,7 @@ public class Main extends Activity implements OnClickListener {
 	private EditText editPerimetro;
 	private Button botao01;
 	private RadioGroup seletorDeComodo;
+	private TextView resultadosText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,9 @@ public class Main extends Activity implements OnClickListener {
 
 		botao01 = (Button) findViewById(R.id.button1);
 		seletorDeComodo = (RadioGroup) findViewById(R.id.ComodosRadioGroup);
-
+		resultadosText= (TextView) findViewById(R.id.textViewResultado);
+		
+		
 		botao01.setOnClickListener(this);
 	}
 
@@ -68,8 +72,9 @@ public class Main extends Activity implements OnClickListener {
 			}
 			comodo01.area = Double.parseDouble(editArea.getText().toString());
 			comodo01.perimetro = Double.parseDouble(editPerimetro.getText().toString());
-			Log.d("USER", comodo01.getTipo()+" - Iluminação: " + comodo01.getPotenciaDeIluminacao()+ "VA - No de Tomadas:" + comodo01.getTug());
-			
+			String resultado = comodo01.getTipo()+" - Iluminação: " + comodo01.getPotenciaDeIluminacao()+ "VA - No de Tomadas:" + comodo01.getTug();
+			Log.d("USER", resultado);
+			resultadosText.setText(resultado);
 		}
 
 	}

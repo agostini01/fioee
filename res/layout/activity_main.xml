@@ -15,9 +15,8 @@
 
             <EditText
                 android:id="@+id/editArea"
-                android:layout_width="wrap_content"
+                android:layout_width="172dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
                 android:text="Area" >
@@ -27,9 +26,8 @@
 
             <EditText
                 android:id="@+id/editPerimetro"
-                android:layout_width="wrap_content"
+                android:layout_width="138dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
                 android:text="Perimetro" />
@@ -41,5 +39,43 @@
                 android:layout_weight="1"
                 android:text="Button" />
         </LinearLayout>
+
+     <RadioGroup
+         android:id="@+id/ComodosRadioGroup"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/BanheiroRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Banheiro" />
+
+            <RadioButton
+                android:id="@+id/CozinhaRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copa/Cozinha/Área de Serviço" />
+
+            <RadioButton
+                android:id="@+id/VarandaRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Varanda" />
+
+            <RadioButton
+                android:id="@+id/DormitorioRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dormitório/Sala" />
+
+            <RadioButton
+                android:id="@+id/OutroRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outro" />
+        </RadioGroup>
 
     </LinearLayout>

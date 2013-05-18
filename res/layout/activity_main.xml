@@ -12,7 +12,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android1:orientation="vertical" >
+            android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,14 +38,20 @@
                 android:text="Perimetro" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Calcular" />
         </LinearLayout>
 
-     <RadioGroup
+            <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apagar"
+                    android:id="@+id/button02"/>
+
+            <RadioGroup
          android:id="@+id/ComodosRadioGroup"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
@@ -87,5 +93,6 @@
          android:id="@+id/textViewResultado"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content" />
-     </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>

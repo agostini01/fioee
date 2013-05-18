@@ -22,6 +22,7 @@ public class Main extends Activity implements OnClickListener {
 	private EditText editArea;
 	private EditText editPerimetro;
 	private Button botao01;
+    private Button botao02;
 	private RadioGroup seletorDeComodo;
 	private TextView resultadosText;
 
@@ -33,12 +34,14 @@ public class Main extends Activity implements OnClickListener {
 		editArea = (EditText) findViewById(R.id.editArea);
 		editPerimetro = (EditText) findViewById(R.id.editPerimetro);
 
-		botao01 = (Button) findViewById(R.id.button1);
+		botao01 = (Button) findViewById(R.id.button01);
+        botao02 = (Button) findViewById(R.id.button02);
 		seletorDeComodo = (RadioGroup) findViewById(R.id.ComodosRadioGroup);
 		resultadosText= (TextView) findViewById(R.id.textViewResultado);
 		
 		
 		botao01.setOnClickListener(this);
+        botao02.setOnClickListener(this);
 	}
 
 	@Override
@@ -72,10 +75,15 @@ public class Main extends Activity implements OnClickListener {
 			}
 			comodo01.area = Double.parseDouble(editArea.getText().toString());
 			comodo01.perimetro = Double.parseDouble(editPerimetro.getText().toString());
-			String resultado = comodo01.getTipo()+" - Iluminação: " + comodo01.getPotenciaDeIluminacao()+ "VA - No de Tomadas:" + comodo01.getTug();
+			String resultado = comodo01.getTipo()+" - IluminaÃ§Ã£o: " + comodo01.getPotenciaDeIluminacao()+ "VA - No de Tomadas:" + comodo01.getTug();
 			Log.d("USER", resultado);
 			resultadosText.setText(resultado);
 		}
+        if (v == botao02) {
+            editArea.setText("");
+            editPerimetro.setText("");
+
+        }
 
 	}
 }
